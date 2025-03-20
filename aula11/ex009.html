@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou estrangeiro</title>
+    <style>
+        body{
+            font: normal 15pt arial;
+        }
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou estrangeiro</h1>
+    Digite o país onde você nasceu:
+    <input type="text" name="pesquisar" id="pesquisar">
+    <input type="button" value="Verificar" onclick="pais()">
+    <div id="res"></div>
+    
+
+    <script>
+        function pais(){
+            var test = window.document.querySelector('input#pesquisar').value
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = ` Você é natural do <strong>${test}</strong>`
+            if (test == 'Brasil'){
+                res.innerHTML +='<p>Você é brasileiro</p>'
+            }else{
+                res.innerHTML += '<p>Você é estrangeiro</p>'
+            }
+
+        }
+    </script>
+</body>
+</html>
